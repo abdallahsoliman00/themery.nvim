@@ -76,7 +76,7 @@ end
 
 local function checkDeprecatedConfig()
 	local configFilePath = configSettings.themeConfigFile
-	if configFilePath and not configFilePath:match("v:null") then
+	if configFilePath and not configFilePath:match("v:[\\/]?null[\\/]?$") then
 		print(constants.MSG_INFO.THEME_CONFIG_FILE_DEPRECATED)
 	end
 end
